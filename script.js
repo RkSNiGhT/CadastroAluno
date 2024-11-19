@@ -42,7 +42,9 @@ function addNewRow(alu){
     newRow.insertCell().appendChild(nameNode);
 
     var emailNode = document.createTextNode(alu.email);
-    newRow.insertCell().appendChild(emailNode);
+    var cell = newRow.insertCell();
+    cell.className="d-none d-md-table-cell";
+    cell.appendChild(emailNode);
 
     var turnoNode = document.createTextNode(cursos[alu.curso - 1].name);
     newRow.insertCell().appendChild(turnoNode);
@@ -71,3 +73,30 @@ function addNewRow(alu){
     document.getElementById("formProduct").reset();
 
 } */
+
+function save(){
+
+    if(document.getElementById("RadioManha").checked){
+        turn = 1;
+    }
+    if(document.getElementById("RadioTarde").checked){
+        turn = 2;
+    }
+    if(document.getElementById("RadioNoite").checked){
+        turn = 3;
+    }
+
+    var alu = {
+        id: alunos.length +1,
+        name: document.getElementById("InputNome").value,
+        email: document.getElementById("InputEmail").value,
+        curso: document.getElementById("InputCursos").value,
+        turno: turn
+    };
+
+    addNewRow(alu);
+
+    alunos.push(alu);
+
+    //document.getElementById("formAluno").reset();
+}
