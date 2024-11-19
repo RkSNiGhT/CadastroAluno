@@ -22,24 +22,24 @@
             Formulário de Cadastro:
         </div>
         <form onsubmit="save(); return false;" class="row g-3 text-start mt-1" id="formAluno">
-            <div class="col-1 offset-1 fs-4 fw-light">
+            <div class="col-12 offset-1 fs-4 fw-light col-md-1">
               <label for="InputNome" class="form-label">Nome:</label>
             </div>
-            <div class="col-8">
+            <div class="col-8 col-sm-10 offset-1 offset-md-0">
                 <input type="text" class="form-control" id="InputNome" placeholder="">
             </div>
             <div class="w-100"></div>
-            <div class="col-1 offset-1 fs-4 fw-light">
+            <div class="col-12 offset-1 fs-4 fw-light col-md-1">
               <label for="InputEmail" class="form-label">Email:</label>
             </div>
-            <div class="col-8">
+            <div class="col-8 col-sm-10 offset-1 offset-md-0">
                 <input type="email" class="form-control" id="InputEmail" placeholder="">
             </div>
             <div class="w-100"></div>
-            <div class="col-1 offset-1 fs-4 fw-light">
+            <div class="col-12 offset-1 fs-4 fw-light col-md-1">
               <label for="InputCursos" class="form-label">Cursos:</label>
             </div>
-            <div class="col-4">
+            <div class="col-4 offset-1 offset-md-0">
                 <select class="form-select form-select-lg" aria-label="Large select example" id="InputCursos">
                     <option value="1" selected>Java</option>
                     <option value="2">Cpp</option>
@@ -49,10 +49,10 @@
             </div>
             <div class="w-100"></div>
 
-            <div class="col-1 offset-1 fs-4 fw-light">
+            <div class="col-12 offset-1 fs-4 fw-light col-md-1">
                 <label class="form-label">Turno:</label>
             </div>
-            <div class="col-8">
+            <div class="col-8 offset-1 offset-md-0">
 
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="RadioManha" checked>
@@ -75,7 +75,7 @@
             </div>
             <div class="w-100"></div>
 
-            <button type="submit" class="btn btn-primary col-1 offset-1">Cadastrar</button>
+            <button type="submit" class="btn btn-primary col-2 col-md-1 offset-1">Cadastrar</button>
         </form>
         <div class="ms-5 fs-2 fw-light">
             Alunos Cadastrados:
